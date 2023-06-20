@@ -151,7 +151,6 @@ form button,
     @media (min-width: 359px) and (max-width: 741px) {
         margin-left: 11px;
         width: 12rem;
-
     }
 
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -305,10 +304,6 @@ form button:hover {
 
 .filter-todo {
     padding: 1rem;
-
-    @media only screen and (min-width: 819px) and (max-device-width: 1024px) {
-        width: 15px
-    }
 }
 
 .filter-todo:hover {
@@ -583,16 +578,20 @@ select {
 
 @media only screen and (max-width: 440px) {
     .confirmation_box {
-        /* border: 1px solid black; */
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 250px;
         background: #f7fffe;
-        position: relative;
+        position: absolute;
+        top: 60%;
         bottom: 280px;
-        border-radius: 20px;
+        border-radius: 20px 20px 0px 0px;
+}
+    .confirmation_box_inner, .congratulations_box_inner {
+    background: #f7fffe00;
+    width: 100%;
     }
-
     .optbox_header {
+        width: 100%;
         height: 40px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -601,25 +600,24 @@ select {
     .confirmation_box p {
         position: relative;
         font-size: 1rem;
-        text-align: center;
     }
 
     .donot_proceed {
         border-radius: 10px;
         position: relative;
-        left: 20px;
         text-align: center;
-        font-size: 2.2rem;
-    }
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
 
     .option_box {
         display: flex;
         justify-content: center;
         gap: 50px;
-        width: 250px;
+        width: 100%;
         position: relative;
-        left: 0px;
-        top: 50px;
     }
 
     /* .proceed:hover {
@@ -638,22 +636,6 @@ select {
         font-size: 2.8rem;
     } */
 
-    .optbox_header i {
-        font-size: 2rem;
-        color: #FFF;
-        position: relative;
-        /* background-color:red; */
-        width: 28px;
-        height: 26px;
-        border: none;
-        left: 255px;
-        top: 5px;
-    }
-
-    .optbox_header i:hover {
-        cursor: pointer;
-        color: black;
-    }
 }
 
 #txt-color,

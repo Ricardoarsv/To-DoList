@@ -93,7 +93,6 @@
     <div class="confirmation_box hide " id="confirmation_box">
         <div class="confirmation_box_inner">
             <div class="optbox_header">
-                <i class="fas fa-times" onclick="goback()"></i>
             </div>
             <p id="text-modal">¿Estas seguro de querer eliminar todas las tareas??</p>
             <div class="option_box">
@@ -102,9 +101,6 @@
             </div>
             <div class="confirmation_box hide" id="confirmation_box">
                 <div class="confirmation_box_inner">
-                    <div class="optbox_header">
-                        <i class="fas fa-times" onclick="goback()"></i>
-                    </div>
                     <p id="text-modal">¿Estas seguro de querer eliminar todas las tareas??</p>
                     <div class="option_box">
                         <button class="proceed btn btn-success mt-5 col-3" id="txt-color" onclick="deleteAll();">
@@ -120,33 +116,6 @@
     </div>
 
     <script src="assets/js/app.js"></script>
-
-    <button onclick="scrollWindow()" id="scrollTop" title="Go to top">&uArr;</button>
-    <script>
-        let scrollBtn = document.getElementById("scrollTop");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollBtn.style.display = "block";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        }
-
-        const scrollWindow = function () {
-            if (window.scrollY != 0) {
-                setTimeout(function () {
-                    window.scrollTo(0, window.scrollY - 50);
-                    window.scroll({ top: 0, behavior: "smooth" })
-                    scrollWindow();
-                }, 10);
-            }
-        }
-    </script>
-
 </body>
 
 

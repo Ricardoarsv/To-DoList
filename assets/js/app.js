@@ -48,8 +48,6 @@ function addTodo(e) {
   //Prevent natural behavior
   e.preventDefault();
 
-  const d = new Date();
-  const createTime = d.getTime();
   const currentValue = htmlEncode(todoInput.value)?.trim() || "";
   if (!currentValue) {
     //alert("Fill the box");
@@ -79,7 +77,6 @@ function addTodo(e) {
     id: Math.round(Math.random() * 100), //id for selection
     task: currentValue,
     status: "incomplete",
-    createTime: createTime,
   };
   todoDiv.setAttribute("key", newTodoItem.id);
 
@@ -125,20 +122,10 @@ function addTodo(e) {
   trashButton.innerHTML = `<i class="fas fa-trash"></i>`;
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
-  //Create info button
-  const infoButton = document.createElement("span");
-  infoButton.innerHTML = `<i class="fas fa-info-circle"></i>`;
-  infoButton.classList.add("edit-btn");
-  todoDiv.appendChild(infoButton);
 
   //attach final Todo
   todoList.appendChild(todoDiv);
 
-  if (localStorage.getItem("display-theme") == "dark") {
-    document.querySelectorAll('.todo');
-    todoDiv.classList.toggle('dark-mode');
-    newTodo.classList.toggle('dark-mode');
-  }
 }
 
 function deleteTodo(e) {
@@ -325,22 +312,6 @@ function isDuplicate(task) {
 //   });
 // }
 
-// to display congratulations pop-up if all tasks are completed
-function checkIfAllTaksCompleted() {
-  let todos;
-  if (localStorage.getItem("todos") === null) {
-    todos = [];
-  } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
-  }
-  let counter = 0;
-  let totalItems = todos.length;
-  todos.forEach((todo) => {
-    if (todo.status == "completed") {
-      counter++;
-    }
-  });
-}
 
 function saveLocalTodos(todo) {
   let todos;
@@ -459,7 +430,6 @@ function show_alert() {
 }
 function goback() {
   document.getElementById("confirmation_box").classList.add("hide");
-  document.getElementById("congratulations_box").classList.add("hide");
 }
 
 //function to toggle darkmode
