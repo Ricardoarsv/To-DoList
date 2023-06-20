@@ -618,6 +618,10 @@ select {
         position: relative;
     }
 
+    .myBtn{
+        margin: auto;
+    }
+
     .filter-todo{
         height: 5.8rem;
         padding: 0;
