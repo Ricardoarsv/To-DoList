@@ -127,7 +127,7 @@ form button,
 .myBtn {
     color: var(--white);
     text-align: center;
-    font-family: 'Baloo Bhai 2';
+    font-family: 'Montserrat';
     font-weight: bold;
     font-size: 20px;
     -webkit-appearance: none;
@@ -145,12 +145,11 @@ form button,
     justify-content: center;
     margin: 2rem auto;
     display: flex;
-
-    width: 11rem;
+    width: 20rem;
 
     @media (min-width: 359px) and (max-width: 741px) {
         margin-left: 11px;
-        width: 12rem;
+        width: 200rem;
     }
 
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -158,7 +157,7 @@ form button,
 
     }
 
-    width: 20rem;
+    
 
     @media (min-width: 359px) and (max-width: 741px) {
         margin-left: 11px;
@@ -228,7 +227,7 @@ form button,
 
 .buttons-wrapper {
     margin: 2rem auto;
-    font-family: 'Baloo Bhai 2', cursive;
+    font-family: 'Montserrat';
 }
 
 .button-div {
@@ -273,7 +272,7 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Baloo Bhai 2', cursive;
+    font-family: 'Montserrat';
 }
 
 .todo-list {
@@ -415,7 +414,7 @@ select {
     overflow: hidden;
     background-color: var(--gray-shade-1);
     border-radius: 5px;
-    font-family: 'Baloo Bhai 2', cursive !important;
+    font-family: 'Montserrat';
 }
 
 .abc {
@@ -483,7 +482,7 @@ select {
 
 .confirmation_box,
 .congratulations_box {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: 'Montserrat';
     position: fixed;
     top: 0;
     bottom: 0;
@@ -512,7 +511,6 @@ select {
 }
 
 .optbox_header {
-    background-color: #0093E9;
     background: linear-gradient(90deg, rgb(107, 107, 107) 0%, rgb(68, 68, 68) 100%);
     height: 50px;
     border-top-left-radius: 20px;
@@ -618,6 +616,11 @@ select {
         gap: 50px;
         width: 100%;
         position: relative;
+    }
+
+    .filter-todo{
+        height: 5.8rem;
+        padding: 0;
     }
 
     /* .proceed:hover {
